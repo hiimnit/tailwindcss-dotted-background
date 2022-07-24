@@ -36,11 +36,13 @@ module.exports = {
 Combine the `bg-dotted-spacing-{spacing}` and `bg-dotted-{colors}` classes to specify the spacing and dots color.
 
 ```html
-<div class="bg-dotted-spacing-4 bg-dotted-gray-200">
-    Screen readers only
-</div>
+<div class="bg-dotted-spacing-4 bg-dotted-gray-200" />
+
+<div class="bg-dotted-spacing-[9px] bg-dotted-red-300 hover:bg-dotted-spacing-2" />
 ```
 
 ## Compatibility
 
-TODO
+Dots are created using `background-image` and `background-size` so these utilities are incompatible with any classes using these properties.
+
+[Arbitrary values](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values) are supported for both `bg-dotted-spacing-{spacing}` and `bg-dotted-{colors}` classes.
