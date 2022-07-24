@@ -8,6 +8,10 @@
     "background",
     "plugin"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hiimnit/tailwindcss-dotted-background.git"
+  },
   "author": "Filip Soukup <ffilipsoukup@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
