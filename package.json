@@ -1,0 +1,20 @@
+{
+  "name": "tailwindcss-dotted-background",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "background",
+    "plugin"
+  ],
+  "author": "Filip Soukup <ffilipsoukup@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "tailwindcss": "^3.0.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.0.9",
+    "tailwindcss": "^3.0.0"
+  }
+}
