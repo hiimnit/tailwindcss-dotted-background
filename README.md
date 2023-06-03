@@ -33,12 +33,24 @@ module.exports = {
 
 ## Usage
 
-Combine the `bg-dotted-spacing-{spacing}` and `bg-dotted-{colors}` classes to specify the spacing and dots color.
+Combine the `bg-dotted-spacing-{spacing}` and `bg-dotted-{colors}` classes to specify the spacing and the color of the dots.
 
 ```html
 <div class="bg-dotted-spacing-4 bg-dotted-gray-200" />
 
 <div class="bg-dotted-spacing-[9px] bg-dotted-red-300 hover:bg-dotted-spacing-2" />
+```
+
+The default radius of the dots is `1px`. Use `bg-dotted-radius-{spacing}` to change the size.
+
+```html
+<div class="bg-dotted-spacing-6 bg-dotted-red-700 bg-dotted-radius-1" />
+```
+
+`bg-dotted-spacing-{spacing}` changes both the width and height at once. Use `bg-dotted-spacing-x-{spacing}` and `bg-dotted-spacing-y-{spacing}` to specify different height and width.
+
+```html
+<div class="bg-dotted-spacing-x-6 bg-dotted-spacing-y-3 bg-dotted-cyan-900" />
 ```
 
 ## Compatibility

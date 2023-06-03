@@ -7,7 +7,20 @@ const dottedBg = plugin(function ({ matchUtilities, theme }) {
   matchUtilities(
     {
       "bg-dotted-spacing": (value) => ({
-        "background-size": `${value} ${value}`,
+        "--tw-bg-dotted-spacing-x": value,
+        "--tw-bg-dotted-spacing-y": value,
+        "background-size":
+          "var(--tw-bg-dotted-spacing-x) var(--tw-bg-dotted-spacing-y)",
+      }),
+      "bg-dotted-spacing-x": (value) => ({
+        "--tw-bg-dotted-spacing-x": value,
+        "background-size":
+          "var(--tw-bg-dotted-spacing-x) var(--tw-bg-dotted-spacing-y)",
+      }),
+      "bg-dotted-spacing-y": (value) => ({
+        "--tw-bg-dotted-spacing-y": value,
+        "background-size":
+          "var(--tw-bg-dotted-spacing-x) var(--tw-bg-dotted-spacing-y)",
       }),
     },
     {
@@ -18,12 +31,28 @@ const dottedBg = plugin(function ({ matchUtilities, theme }) {
   matchUtilities(
     {
       "bg-dotted": (value) => ({
-        "background-image": `radial-gradient(circle at center, ${value} 1px, transparent 0)`,
+        "--tw-bg-dotted-color": value,
+        "--tw-bg-dotted-radius": "1px",
+        "background-image":
+          "radial-gradient(circle at center, var(--tw-bg-dotted-color) var(--tw-bg-dotted-radius), transparent 0)",
       }),
     },
     {
       values: flattenColorPalette(theme("colors")),
       type: "color",
+    }
+  );
+
+  matchUtilities(
+    {
+      "bg-dotted-radius": (value) => ({
+        "--tw-bg-dotted-radius": value,
+        "background-image":
+          "radial-gradient(circle at center, var(--tw-bg-dotted-color) var(--tw-bg-dotted-radius), transparent 0)",
+      }),
+    },
+    {
+      values: theme("spacing"),
     }
   );
 });
